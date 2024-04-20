@@ -33,9 +33,5 @@ public class stringbuilder {
 
         // StringBuilder 객체를 문자열로 변환하여 출력
         System.out.println(sb.toString()); // 출력: "avaJ olleH"
-
-
-
-
     }
 }

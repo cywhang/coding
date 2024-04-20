@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,9 +15,10 @@ public class num {
         for (int i = 0; i < queries.length; i++) {
             for (int j = queries[i][0]; j <= queries[i][1]; j++) {
                 int k = arr[j]+1;
-
+                System.out.println("k: " + k);
+                arr[j] = k;
             }
         }
-        return answer;
+        return arr;
     }
 }
