@@ -10,12 +10,20 @@ public class randomK {
 
     public static int[] solution(int[] arr, int k) {
         int[] answer = new int[k];
-        int i = 0;
-        while (answer.length <= k) {
-            //if (arr.)
+        arr = Arrays.stream(arr).distinct().toArray();
+        if (arr.length < k) {
+            for (int i = 0; i < arr.length; i++) {
+                answer[i] = arr[i];
+                System.out.println("arr[i]: " +arr[i]);
+            }
+            for (int i = arr.length; i < k; i++) {
+                answer[i] = -1;
+            }
+        } else {
+            for (int i = 0; i < k; i++) {
+                answer[i] = arr[i];
+            }
         }
-
-
         return answer;
     }
 }
